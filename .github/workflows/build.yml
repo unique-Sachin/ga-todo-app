@@ -1,20 +1,27 @@
-name: Github Action 1
 
-on:
-  push:
-    branches: ["main"]
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      -name: Checkout
-       uses: actions/checkout@v3
-      -name: Setup Node
-       uses: actions/setup-node@v3
-       with:
-          node-version: "18"
-      -name: Install Dependencies
-       run : npm ci
-      -name: Build Project
-       run : npm run build
+object
+{3}
+name
+:
+Github Action 1
+on
+{1}
+push
+{1}
+branches
+[1]
+0
+:
+main
+jobs
+{1}
+build
+{2}
+runs-on
+:
+ubuntu-latest
+steps
+{1}
+-name
+:
+Checkout uses: actions/checkout@v3
