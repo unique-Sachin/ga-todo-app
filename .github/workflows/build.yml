@@ -1,7 +1,8 @@
 name: Github Action 1
 
-on: push:
-      branches: ["main"]
+on:
+  push:
+    branches: ["main"]
 
 jobs:
   build:
