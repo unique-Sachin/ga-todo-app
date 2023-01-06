@@ -1,18 +1,27 @@
-name: Github Action 1
+name: Github Action No. 2
 
 on:
   push:
     branches: ["main"]
+  # Allos us to run worflow from UI
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      -name: Setup Node
-       uses: actions/setup-node@v3
-       with:
-          node-version: "18"
-      -name: Install Dependencies
-       run : npm ci
-      -name: Build Project
-       run : npm run build
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+      - name: Install Dependencies
+        run: npm ci
+      - name: Build Project
+        run: npm run build
