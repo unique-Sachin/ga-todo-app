@@ -28,7 +28,7 @@ const TodoApp = () => {
   }, []);
   return (
     <div>
-      <h3>TodoApp Deployment on Vercel</h3>
+      <h3>TodoApp Deployment on Netlify</h3>
       <TodoInput
         value={value}
         handleChange={handleChange}
